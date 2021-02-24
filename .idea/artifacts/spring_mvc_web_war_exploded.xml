@@ -1,10 +1,10 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="spring-mvc:war exploded">
-    <output-path>$PROJECT_DIR$/spring-mvc/target/spring-mvc</output-path>
+  <artifact type="exploded-war" name="spring-mvc_web:war exploded">
+    <output-path>$PROJECT_DIR$/spring-mvc_web/target/spring-mvc</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
-        <module>spring-mvc</module>
+        <module>spring-mvc_web</module>
         <packaging>war</packaging>
       </options>
     </properties>
@@ -14,13 +14,14 @@
           <element id="module-output" name="spring-mvc_web" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Maven: org.springframework:spring-web:5.2.12.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.2.12.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.2.12.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.2.12.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-core:5.2.12.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.2.12.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-context:5.2.12.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.2.12.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.2.12.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:5.2.12.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:5.2.12.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:5.2.12.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.2.12.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-test:5.2.12.RELEASE" />
