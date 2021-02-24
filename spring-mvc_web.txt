@@ -1,0 +1,83 @@
+servlet配置 *详见web.xml&UserServlet
+    例:
+        xml方式
+            在WEB-INF目录下的web.xml
+            <servlet>
+              <servlet-name>UserServlet</servlet-name>
+              <servlet-class>com.qyj.web.UserServlet</servlet-class>
+            </servlet>
+            <servlet-mapping>
+              <servlet-name>UserServlet</servlet-name>
+              <url-pattern>/userServlet</url-pattern>
+            </servlet-mapping>
+        ann方式
+            在目标servlet上
+            @WebServlet("/userServlet")
+
+listener配置 *详见web.xml&UserServlet&ContextLoaderListener
+    例:
+        xml方式
+            在WEB-INF目录下的web.xml
+            <listener>
+              <listener-class>com.qyj.listener.ContextLoaderListener</listener-class>
+            </listener>
+        ann方式
+            在目标servlet上
+            @WebListener
+
+全局参数的配置 *用于解除耦合,详见web.xml
+    例:
+        xml方式
+            在WEB-INF目录下的web.xml
+                <context-param>
+                  <param-name>contextConfigLocation</param-name>
+                  <param-value>classpath:applicationContext.xml</param-value>
+                </context-param>
+            使用
+                String contextConfigLocation = servletContext.getInitParameter("contextConfigLocation");
+                ApplicationContext app = new ClassPathXmlApplicationContext(contextConfigLocation);
+
+ApplicationContext应用上下文获取方式 *详见UserServlet&ContextLoaderListener
+    可以使用ServletContextListener监听Web应用的启动
+        1.创建ServletContextListener类,监听Web应用的启动
+        2.监听到web应用启动时,加载spring的applicationContext.xml配置文件
+        3.创建应用上下文对象ApplicationContext并将其存储到最大的域servletContext域中
+        4.在需要处创建servletContext对象,使用getAttribute()方法,获取应用上下文对象ApplicationContext
+
+*以上实现都在在下面被spring封装完毕
+spring集成web环境
+    1.spring提供获取应用上下文的工具
+        1.ContextLoaderListener
+            spring提供的监听器ContextLoaderListener,其内部加载spring配置文件,创建应用上下文对象,并存储到ServletContext域中
+        2.WebApplicationContextUtils
+            spring提供的客户端工具WebApplicationContextUtils供使用者获得上下文对象
+    2.程序员需要做的事情
+        1.在web.xml中配置ContextLoaderListener监听器(导入spring-web坐标)
+            1.导入坐标
+                <dependency>
+                  <groupId>org.springframework</groupId>
+                  <artifactId>spring-web</artifactId>
+                  <version>5.2.12.RELEASE</version>
+                </dependency>
+            2.配置监听器
+                <listener>
+                  <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+                </listener>
+            3.配置spring全局初始化参数
+                <context-param>
+                  <param-name>contextConfigLocation</param-name>
+                  <param-value>classpath:applicationContext.xml</param-value>
+                </context-param>
+        2.使用WebApplicationContextUtils获得应用上下文对象ApplicationContext
+            *注:以下方法真的封装的很巧妙
+                //获取ServletContext对象
+                ServletContext servletContext = this.getServletContext();
+                //通过spring获取上下文对象
+                ApplicationContext app = WebApplicationContextUtils.getWebApplicationContext(servletContext);
+
+
+
+
+
+
+

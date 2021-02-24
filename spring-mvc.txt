@@ -1,0 +1,3 @@
+spring-mvc
+    springmvc是基于java的实现mvc设计模型的请求驱动类型的轻量级web框架
+    通过一套注解,让一个简单的java类称为处理请求的控制器,无需实现任何接口
