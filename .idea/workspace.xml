@@ -10,69 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b69a4128-4072-45d0-8ff6-ce7f60428e0e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/spring_mvc_web_war.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/spring_mvc_web_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_2_12_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-mvc_web/src/main/java/com/qyj/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-mvc_web/src/main/resources/spring-mvc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-mvc_web/src/main/webapp/success.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/spring_mvc_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/spring_mvc_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-mvc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/spring-mvc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/spring-mvc_web.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/src/main/java/com/qyj/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/src/main/java/com/qyj/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/src/main/java/com/qyj/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/src/main/java/com/qyj/dao/impl/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/src/main/java/com/qyj/listener/ContextLoaderListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/src/main/java/com/qyj/listener/ContextLoaderListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/src/main/java/com/qyj/listener/WebApplicationContextUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/src/main/java/com/qyj/listener/WebApplicationContextUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/src/main/java/com/qyj/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/src/main/java/com/qyj/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/src/main/java/com/qyj/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/src/main/java/com/qyj/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/src/main/java/com/qyj/web/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/src/main/java/com/qyj/web/UserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/src/main/resources/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/src/main/resources/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/classes/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/classes/com/qyj/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/classes/com/qyj/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/classes/com/qyj/dao/impl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/classes/com/qyj/dao/impl/UserDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/classes/com/qyj/listener/ContextLoaderListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/classes/com/qyj/listener/ContextLoaderListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/classes/com/qyj/listener/WebApplicationContextUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/classes/com/qyj/listener/WebApplicationContextUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/classes/com/qyj/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/classes/com/qyj/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/classes/com/qyj/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/classes/com/qyj/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/classes/com/qyj/web/UserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/classes/com/qyj/web/UserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/classes/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/spring-mvc/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/spring-mvc/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/spring-mvc/WEB-INF/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/spring-mvc/WEB-INF/classes/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/spring-mvc/WEB-INF/classes/com/qyj/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/spring-mvc/WEB-INF/classes/com/qyj/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/spring-mvc/WEB-INF/classes/com/qyj/dao/impl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/spring-mvc/WEB-INF/classes/com/qyj/dao/impl/UserDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/spring-mvc/WEB-INF/classes/com/qyj/listener/ContextLoaderListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/spring-mvc/WEB-INF/classes/com/qyj/listener/ContextLoaderListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/spring-mvc/WEB-INF/classes/com/qyj/listener/WebApplicationContextUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/spring-mvc/WEB-INF/classes/com/qyj/listener/WebApplicationContextUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/spring-mvc/WEB-INF/classes/com/qyj/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/spring-mvc/WEB-INF/classes/com/qyj/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/spring-mvc/WEB-INF/classes/com/qyj/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/spring-mvc/WEB-INF/classes/com/qyj/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/spring-mvc/WEB-INF/classes/com/qyj/web/UserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/spring-mvc/WEB-INF/classes/com/qyj/web/UserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/spring-mvc/WEB-INF/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/spring-mvc/WEB-INF/classes/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/spring-mvc/WEB-INF/lib/c3p0-0.9.1.2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/spring-mvc/WEB-INF/lib/c3p0-0.9.1.2.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/spring-mvc/WEB-INF/lib/druid-1.1.10.jar" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/spring-mvc/WEB-INF/lib/druid-1.1.10.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/spring-mvc/WEB-INF/lib/mysql-connector-java-8.0.22.jar" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/spring-mvc/WEB-INF/lib/mysql-connector-java-8.0.22.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/spring-mvc/WEB-INF/lib/protobuf-java-3.11.4.jar" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/spring-mvc/WEB-INF/lib/protobuf-java-3.11.4.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/spring-mvc/WEB-INF/lib/spring-aop-5.2.12.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/spring-mvc/WEB-INF/lib/spring-aop-5.2.12.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/spring-mvc/WEB-INF/lib/spring-beans-5.2.12.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/spring-mvc/WEB-INF/lib/spring-beans-5.2.12.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/spring-mvc/WEB-INF/lib/spring-context-5.2.12.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/spring-mvc/WEB-INF/lib/spring-context-5.2.12.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/spring-mvc/WEB-INF/lib/spring-core-5.2.12.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/spring-mvc/WEB-INF/lib/spring-core-5.2.12.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/spring-mvc/WEB-INF/lib/spring-expression-5.2.12.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/spring-mvc/WEB-INF/lib/spring-expression-5.2.12.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/spring-mvc/WEB-INF/lib/spring-jcl-5.2.12.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/spring-mvc/WEB-INF/lib/spring-jcl-5.2.12.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/spring-mvc/WEB-INF/lib/spring-jdbc-5.2.12.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/spring-mvc/WEB-INF/lib/spring-jdbc-5.2.12.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/spring-mvc/WEB-INF/lib/spring-test-5.2.12.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/spring-mvc/WEB-INF/lib/spring-test-5.2.12.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/spring-mvc/WEB-INF/lib/spring-tx-5.2.12.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/spring-mvc/WEB-INF/lib/spring-tx-5.2.12.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/spring-mvc/WEB-INF/lib/spring-web-5.2.12.RELEASE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/spring-mvc/WEB-INF/lib/spring-web-5.2.12.RELEASE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/spring-mvc/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/spring-mvc/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-mvc/target/spring-mvc/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/target/spring-mvc/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-mvc_web/spring-mvc_web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/spring-mvc_web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-mvc_web/src/main/java/com/qyj/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/src/main/java/com/qyj/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-mvc_web/src/main/resources/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_web/src/main/resources/spring-mvc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,13 +70,15 @@
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.0.23">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -331,7 +275,8 @@
       <option name="presentableId" value="Default" />
       <updated>1614134701821</updated>
       <workItem from="1614134703570" duration="239000" />
-      <workItem from="1614134988077" duration="10156000" />
+      <workItem from="1614134988077" duration="11944000" />
+      <workItem from="1614214228155" duration="4338000" />
     </task>
     <task id="LOCAL-00001" summary="2021年2月24日10:45:59">
       <created>1614134763330</created>
@@ -347,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614151697954</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="2021年2月24日17:01:30">
+      <created>1614157297737</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1614157297737</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,10 +315,16 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2021年2月24日10:45:59" />
     <MESSAGE value="2021年2月24日15:28:09" />
-    <option name="LAST_COMMIT_MESSAGE" value="2021年2月24日15:28:09" />
+    <MESSAGE value="2021年2月24日17:01:30" />
+    <option name="LAST_COMMIT_MESSAGE" value="2021年2月24日17:01:30" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

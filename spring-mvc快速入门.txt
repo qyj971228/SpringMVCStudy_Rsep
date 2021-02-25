@@ -1,0 +1,62 @@
+spring-mvc
+    springmvc是基于java的实现mvc设计模型的请求驱动类型的轻量级web框架
+    通过一套注解,让一个简单的java类称为处理请求的控制器,无需实现任何接口
+    1.快速入门
+        1.开发步骤
+            1.导入SpringMVC
+                *pom.xml
+            2.配置SpringMVC核心控制器DispathcerServlet
+                *web.xml
+            3.创建Controller类和视图页面
+            4.使用注解配置Controller类中业务方法的映射地址
+                *UserController.java
+            5.配置SpringMVC核心文件spring-mvc.xml
+                spring-mvc.xml
+            6.客户端发起请求测试
+    2.简单解析
+        1.SpringMVC执行流程
+            1.用户发送请求至前端控制器DispatcherServlet
+            2.DispatcherServlet收到请求调用HandlerMapping处理器映射器
+            3.处理器映射器找到具体的处理器(可以根据xml配置,注解进行查找),生成处理器对象及处理器拦截器(如果有则生成)一并返回给DispatcherServlet
+            4.DispatcherServlet调用HandlerAdapter处理器适配器
+            5.HandlerAdapter经过适配调用具体的处理器(Controller,也叫后端控制器)
+            6.Controller执行完成返回ModelAndView
+            7.HandlerAdapter将Controller执行结果ModelAndView返回给DispatcherServlet
+            8.DispatcherServlet将ModelAndView传给ViewReslover视图解析器
+            9.ViewReslover解析后返回具体View
+            10.DispatcherServlet根据View进行渲染视图(将模型数据填充至视图中).DispatcherServlet响应用户
+        2.SpringMVC相关组件
+            1.前端控制器: DispatcherServlet
+            2.处理端映射器: HandlerMapping
+            3.处理器适配器: HandlerAdapter
+            4.处理器: Handler
+            5.视图解析器: ViewReslover
+            6.视图: View
+        3.SpringMVC注解解析 详见*com.qyj.controller.UserController
+            @RequestMapping
+            作用:
+                用于建立请求URL和处理请求方法之间的对应关系
+            位置:
+                类上:请求URL的第一级访问目录.此处不写的话相当于应用的根目录
+                方法上:请求URL的第二级访问目录
+                    *一级目录二级目录一起组成访问虚拟路径
+            属性:
+                value:用于指定请求的URL.它和path属性的作用是一样的
+                method:用于指定请求的方式
+                params:用于指定限制请求参数的条件.它支持简单的表达式,要求请求参数的key和value必须和配置的一模一样
+                例:
+                    params = {"username"},表示请求参数中必须有username
+                    params = {"money!100"},表示请求参数中money不能是100 -> 表达式的方式使用比较少
+        4.spring-mvc.xml配置解析
+            REDIRECT_URL_PREFIX = "redirect"
+            FORWARD_URL_PREFIX = "redirect"
+            prefix=""
+            suffix=""
+            <!--配置内部资源视图解析器-->
+            <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+                <!--/jsp/success.jsp-->
+                <property name="prefix" value="/jsp/"/>
+                <property name="suffix" value=".jsp"/>
+            </bean>
+
+
