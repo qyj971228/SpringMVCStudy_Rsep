@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring-mvc_web" />
+        <module name="spring-mvc_quickstart" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="spring-mvc_web" target="1.7" />
+      <module name="spring-mvc_quickstart" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

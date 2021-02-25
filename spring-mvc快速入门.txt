@@ -48,8 +48,8 @@ spring-mvc
                     params = {"username"},表示请求参数中必须有username
                     params = {"money!100"},表示请求参数中money不能是100 -> 表达式的方式使用比较少
         4.spring-mvc.xml配置解析
-            REDIRECT_URL_PREFIX = "redirect"
-            FORWARD_URL_PREFIX = "redirect"
+            REDIRECT_URL_PREFIX = "redirect" 跳转
+            FORWARD_URL_PREFIX = "forward" 直接访问
             prefix=""
             suffix=""
             <!--配置内部资源视图解析器-->

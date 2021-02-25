@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/spring-mvc_web/spring-mvc_web.iml" filepath="$PROJECT_DIR$/spring-mvc_web/spring-mvc_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-mvc_quickstart/spring-mvc_quickstart.iml" filepath="$PROJECT_DIR$/spring-mvc_quickstart/spring-mvc_quickstart.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/springMVC.iml" filepath="$PROJECT_DIR$/.idea/springMVC.iml" />
     </modules>
   </component>
