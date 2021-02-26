@@ -8,11 +8,31 @@
                http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
                http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <!--声明转换器-->
+    <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+        <property name="converters">
+            <list>
+                <bean class="com.qyj.converter.DateConverter"></bean>
+            </list>
+        </property>
+    </bean>
+
+    <!--mvc注解驱动-->
+    <mvc:annotation-driven conversion-service="conversionService"/>
+
+    <!--开放资源的访问2-->
+    <!--将请求交给原始容器-->
+    <mvc:default-servlet-handler/>
+
+    <!--开放资源的访问1-->
+<!--    <mvc:resources mapping="/js/**" location="/js/" />-->
+
     <!--扫描web层-->
     <context:component-scan base-package="com.qyj.controller"></context:component-scan>
 
-    <!--mvc注解驱动-->
-    <mvc:annotation-driven/>
+
+
+
 
 <!--    <context:component-scan base-package="com.qyj">-->
 <!--        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>-->

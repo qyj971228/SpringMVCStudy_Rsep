@@ -1,0 +1,231 @@
+spring-mvc获得请求数据 *详见com.qyj.controller.UserController.save11()及以后方法
+    1.获得请求参数
+        客户端的请求参数格式:name=value&name=value&...
+
+        服务器端要获得请求的参数,优势还需要进行数据的封装,SpringMVC可以接受如下类型的参数
+            1.基本数据类型
+            2.POJO类型
+            3.数组类型
+            4.集合类型
+
+    2.获得基本类型参数
+        Controller中的业务方法的参数名称要与请求参数的name一致,参数会自动映射匹配
+        编码:
+            @RequestMapping(value="/quick11")
+            @ResponseBody
+            public void save11(String username, int age) throws IOException{
+                System.out.println("username="+username+"age="+age);
+            }
+        url:
+            http://localhost:8080/user/quick11?username=zhangsan&age=100
+        打印:
+            username=zhangsanage=100
+
+    3.获得POJO类型参数
+        Controller中的业务方法的POJO参数的属性名与请求参数的name一致,参数值会自动映射匹配
+        编码:
+            @RequestMapping(value="/quick12")
+            @ResponseBody
+            public void save12(User user) throws IOException{
+                System.out.println(user);
+            }
+        url:
+            http://localhost:8080/user/quick12?username=lisi&age=123
+        打印:
+            {"username":"lisi","age":123}
+
+    4.获得数组类型参数
+        Controller中的业务方法的数组名称与请求参数的name一致,参数值会自动映射匹配
+        编码:
+            @RequestMapping(value="/quick13")
+            @ResponseBody
+            public void save13(String[] strings) throws IOException{
+                System.out.println(Arrays.asList(strings));//转换为集合输出
+            }
+        url:
+            http://localhost:8080/user/quick13?strings=1&strings=2&strings=3
+        打印:
+            [1, 2, 3]
+
+    *5.获得集合类型参数
+        1.获得集合参数时,要将集合参数包装到一个POJO中
+            封装一个集合到POJO中
+                public class VO {
+                    private List<User> userList;
+                    public List<User> getUserList() {
+                        return userList;
+                    }
+                    public void setUserList(List<User> userList) {
+                        this.userList = userList;
+                    }
+                    @Override
+                    public String toString() {
+                        return "VO{" +
+                                "userList=" + userList +
+                                '}';
+                    }
+                }
+            编码:
+                @RequestMapping(value="/quick14")
+                @ResponseBody
+                public void save14(VO vo) throws IOException{
+                    System.out.println(vo);
+                }
+            表单提交: *见form.jsp
+                <form action="/user/quick14">
+                    <%--表明时第几个user对象的username--%>
+                    <input type="text" name="userList[0].username"><br>
+                    <input type="text" name="userList[0].age"><br>
+                    <input type="text" name="userList[1].username"><br>
+                    <input type="text" name="userList[1].age"><br>
+                    <input type="submit" value="提交">
+                </form>
+            打印:
+                VO{userList=[User{username='zhangsan', age=1}, User{username='lisi', age=2}]}
+        2.当时用ajax提交时,可以指定contentType为json形式,name在方法参数位置使用@RequestBody可以直接接收集合数据而无需使用POJO包装
+            编码:
+                @RequestMapping(value="/quick15")
+                @ResponseBody
+                public void save15(@RequestBody List<User> userList) throws IOException{
+                    System.out.println(userList);
+                }
+            ajax:
+                var userlist = new Array();
+                userlist.push({username:"zhangsan",age:1})
+                userlist.push({username:"lisi",age:2})
+
+                $.ajax({
+                    type:"post",
+                    url:"${pageContext.request.contextPath}/user/quick15",
+                    data:JSON.stringify(userlist),
+                    contentType:"application/json;charset=utf-8"
+                })
+        3.静态资源访问的开启
+            在spring-mvc中配置
+                <!--开放资源的访问1-->
+                <!--将请求交给原始容器-->
+                <mvc:default-servlet-handler/>
+
+                <!--开放资源的访问2-->
+                <!--指定资源开放-->
+                <mvc:resources mapping="/js/**" location="/js/" />
+
+    6.请求数据乱码问题
+        在web.xml中
+        <!--配置全局过滤的filter-->
+          <filter>
+            <filter-name>CharacterEncodingFilter</filter-name>
+            <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+            <init-param>
+              <param-name>encoding</param-name>
+              <param-value>utf-8</param-value>
+            </init-param>
+          </filter>
+          <filter-mapping>
+            <filter-name>CharacterEncodingFilter</filter-name>
+            <url-pattern>/*</url-pattern>
+          </filter-mapping>
+
+    *7.参数绑定注解
+        当请求的参数名称与Controller的业务方法参数名称不一致时,就需要通过@RequestParam注解显式地绑定
+        注解@RequestParam还有如下参数可以使用
+            1.value: 请求参数名称
+            2.required: 在此指定请求参数是否必须包括,默认是true,提交时如果没有此参数则报错
+            3.defaultValue: 当没有指定请求参数时,则使用指定的默认值赋值
+        编码:
+            @RequestMapping(value="/quick16")
+            @ResponseBody
+            public void save16(@RequestParam(value="name",required = true,defaultValue = "unname") String username) throws IOException{
+                System.out.println(username);
+            }
+        url:
+            http://localhost:8080/user/quick16?name=zhangsan
+            打印: zhangsan
+            http://localhost:8080/user/quick16
+            打印: nuname
+
+    8.获得Restful风格的参数
+        Restful是一种软件架构风格,设计风格,而不是标准,只是提供了一组设计原则和约束条件
+
+        Restful风格的请求是使用"url+请求方式"表示一次请求目的
+            GET: 用于获取资源
+            POST: 用于新建资源
+            PUT: 用于更新资源
+            DELETE: 用于删除资源
+
+        例:
+            /user/1 GET:    得到id=1的user
+            /user/1 DELETE: 删除id=1的user
+            /user/1 PUT:    更新id=1的user
+            /user   POST:   新增user
+
+        @PathVariable注解进行占位符的匹配获取工作
+        编码:
+            @RequestMapping(value="/quick17/{username}",method="?")
+            @ResponseBody
+            public void save17(@PathVariable(value="username",required = true) String username) throws IOException{
+                System.out.println(username);
+            }
+        url:http://localhost:8080/user/nametest
+
+    9.自定义类型转换器
+        springmvc默认已经提供了一些常用的类型转换器,例如客户端提交的字符串转成int型进行参数设置
+        但是不是所有的数据类型都提供了转换器,没有提供的就需要自定义转换器,例如:日期类型的数据就需要自定义转换器
+
+        1.定义转换器类实现Converter接口 *详见com.qyj.converter.DateConverter
+        2.在配置文件中声明转换器
+        3.在<annotation-driven>中引用转换器
+            <!--声明转换器-->
+            <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+                <property name="converters">
+                    <list>
+                        <bean class="com.qyj.converter.DateConverter"></bean>
+                    </list>
+                </property>
+            </bean>
+            <!--mvc注解驱动-->
+            <mvc:annotation-driven conversion-service="conversionService"/>
+
+    10.使用原生api
+        如果想在Controller类中使用Servlet原生API(比如想使用HttpServletRequest,HttpServletResponse对象)
+        直接放在方法的参数列表中就可以在方法中直接使用(springmvc会自动创建对象加入到此方法)
+        编码:
+            @RequestMapping(value="/quick19")
+            @ResponseBody
+            public void save19(HttpServletResponse resp, HttpServletRequest req, HttpSession session) throws IOException{
+                String name = req.getParameter("name");
+                System.out.println(name);
+                System.out.println(session);
+                resp.getWriter().write(name);
+            }
+        url:
+            http://localhost:8080/user/quick19?name=zhaoliu
+
+    11.获得请求头
+        1.@RequestHeader
+            相当于request.getHeader()
+            注解属性如下:
+                1.value: 请求头的名称
+                2.required: 是否必须携带此请求头
+            编码:
+                @RequestMapping(value="/quick20")
+                @ResponseBody
+                public void save20(@RequestHeader(value = "User-Agent") String user_agent) throws IOException{
+                    System.out.println(user_agent);
+                }
+        2.@CookieValue
+            使用次注解可以获得指定Cookie的值
+            注解属性如下:
+                1.value: 请求头的名称
+                2.required: 是否必须携带此请求头
+            编码:
+                @RequestMapping(value="/quick21")
+                @ResponseBody
+                public void save21(@CookieValue(value = "JSESSIONID") String jsessionId) throws IOException{
+                    System.out.println(jsessionId);
+                }
+
+    12.文件上传
+
+
+
