@@ -10,7 +10,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b69a4128-4072-45d0-8ff6-ce7f60428e0e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-mvc_quickstart/src/main/webapp/upload.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/spring_mvc_quickstart_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/spring_mvc_quickstart_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-mvc_quickstart/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_quickstart/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-mvc_quickstart/spring-mvc_quickstart.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_quickstart/spring-mvc_quickstart.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-mvc_quickstart/src/main/java/com/qyj/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_quickstart/src/main/java/com/qyj/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-mvc_quickstart/src/main/resources/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_quickstart/src/main/resources/spring-mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-mvc_quickstart/target/classes/com/qyj/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_quickstart/target/classes/com/qyj/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-mvc_quickstart/target/classes/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_quickstart/target/classes/spring-mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-mvc_quickstart/target/spring-mvc/WEB-INF/classes/com/qyj/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_quickstart/target/spring-mvc/WEB-INF/classes/com/qyj/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-mvc_quickstart/target/spring-mvc/WEB-INF/classes/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc_quickstart/target/spring-mvc/WEB-INF/classes/spring-mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-mvc获得请求数据.txt" beforeDir="false" afterPath="$PROJECT_DIR$/spring-mvc获得请求数据.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +35,8 @@
       <list>
         <option value="Interface" />
         <option value="spring-beans.schema" />
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -71,15 +84,13 @@
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.0.23">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -278,7 +289,9 @@
       <workItem from="1614134988077" duration="11944000" />
       <workItem from="1614214228155" duration="19063000" />
       <workItem from="1614298449792" duration="6242000" />
-      <workItem from="1614305692544" duration="7649000" />
+      <workItem from="1614305692544" duration="7734000" />
+      <workItem from="1614394968189" duration="2736000" />
+      <workItem from="1614566564946" duration="4013000" />
     </task>
     <task id="LOCAL-00001" summary="2021年2月24日10:45:59">
       <created>1614134763330</created>
@@ -329,7 +342,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614325095033</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="2021年2月26日21:23:28">
+      <created>1614345814388</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1614345814388</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,7 +374,8 @@
     <MESSAGE value="2021年2月25日10:29:15" />
     <MESSAGE value="2021年2月25日15:49:59" />
     <MESSAGE value="2021年2月26日15:38:08" />
-    <option name="LAST_COMMIT_MESSAGE" value="2021年2月26日15:38:08" />
+    <MESSAGE value="2021年2月26日21:23:28" />
+    <option name="LAST_COMMIT_MESSAGE" value="2021年2月26日21:23:28" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
