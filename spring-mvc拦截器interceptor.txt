@@ -1,0 +1,36 @@
+spring-mvc拦截器interceptor
+
+    1.基本概念
+        springmvc中的拦截器类似于servlet开发中的过滤器filter,用于对处理器进行预处理和后处理
+        将拦截器按一定的顺序连接成一条链,称为拦截器链.
+        在访问被拦截的方法或字段,拦截器链中的拦截器就会按照之前定义的顺序被调用,拦截器也是aop思想的具体实现
+    2.拦截器和过滤器区别
+        拦截器只有使用了springmvc框架的工程才能用
+        拦截器只会拦截访问的控制器方法,如果访问的是jsp,html,css,image,js(静态资源)是不会进行拦截的
+    3.快速入门
+        1.创建拦截器实现HandlerInterceptor接口 com.qyj.interceptor.MyInterceptor1
+            preHandle()
+                方法在请求处理之前进行调用,该方法的返回值是布尔值Boolean类型的,当返回为false时,表示请求结束
+                后续的Interceptor和Controller都不会再执行;当返回值为true时就会继续调用下一个Interceptor的preHandle方法
+            postHandle()
+                该方法是在当前请求进行处理之后被调用,前提是preHandle方法的返回值为true时才能被调用
+                他会在DispatcherServlet进行视图返回渲染之前被调用,所以可以在这个方法中对Controller处理之后的ModelAndView对象进行操作
+            afterCompletion()
+                该方法佳宁在整个请求结束之后,也就是在DispatcherServlet渲染了对应的视图之后执行
+                前提是preHandle方法的返回值为true时才能被调用
+        2.配置拦截器 spring-mvc.xml
+            <mvc:interceptors>
+                <mvc:interceptor>
+                    <mvc:mapping path="/**"/>
+                    <bean class="com.qyj.interceptor.MyInterceptor1"></bean>
+                </mvc:interceptor>
+            </mvc:interceptors>
+        3.测试拦截器的拦截效果
+            *多个拦截器执行顺序(1在2前配置)
+                preHandle
+                preHandle2
+                目标资源执行.......
+                postHandle2
+                postHandle
+                afterCompletion2
+                afterCompletion

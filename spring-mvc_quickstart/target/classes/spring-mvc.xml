@@ -8,6 +8,23 @@
                http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
                http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <!--配置拦截器1-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!--对哪些资源执行拦截操作-->
+            <mvc:mapping path="/**"/>
+            <bean class="com.qyj.interceptor.MyInterceptor1"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
+    <!--配置拦截器2-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!--对哪些资源执行拦截操作-->
+            <mvc:mapping path="/**"/>
+            <bean class="com.qyj.interceptor.MyInterceptor2"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
     <!--声明转换器-->
     <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
         <property name="converters">
@@ -27,17 +44,17 @@
         <property name="maxUploadSizePerFile" value="500000"></property>
     </bean>
 
-    <!--mvc注解驱动-->
+    <!--*1.mvc注解驱动-->
     <mvc:annotation-driven conversion-service="conversionService"/>
 
-    <!--开放资源的访问2-->
+    <!--*2.开放资源的访问2-->
     <!--将请求交给原始容器-->
     <mvc:default-servlet-handler/>
 
     <!--开放资源的访问1-->
 <!--    <mvc:resources mapping="/js/**" location="/js/" />-->
 
-    <!--扫描web层-->
+    <!--*3.扫描web层-->
     <context:component-scan base-package="com.qyj.controller"></context:component-scan>
 
 
@@ -49,7 +66,7 @@
 <!--        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>-->
 <!--    </context:component-scan>-->
 
-    <!--配置内部资源视图解析器-->
+    <!--*4.配置内部资源视图解析器-->
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <!--/jsp/success.jsp-->
         <property name="prefix" value="/jsp/"/>

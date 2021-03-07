@@ -229,12 +229,15 @@ public class UserController {
 
     @RequestMapping(value="/quick22")
     @ResponseBody
-    public void save22(String username, MultipartFile uploadFile) throws IOException{
+    public void save22(String username, MultipartFile[] uploadFile) throws IOException{
         System.out.println(username);
-        System.out.println(uploadFile);
-        //获得上传文件的名称
-        String originalFilename = uploadFile.getOriginalFilename();
-        //指定保存路径
-        uploadFile.transferTo(new File("C:\\Users\\10788\\Desktop\\upload\\"+originalFilename));
+
+        for (MultipartFile multipartFile :
+                uploadFile) {
+            //获得上传文件的名称
+            String originalFilename = multipartFile.getOriginalFilename();
+            //指定保存路径
+            multipartFile.transferTo(new File("C:\\Users\\10788\\Desktop\\upload\\"+originalFilename));
+        }
     }
 }

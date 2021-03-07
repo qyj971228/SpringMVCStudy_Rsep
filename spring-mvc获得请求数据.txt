@@ -261,16 +261,38 @@ spring-mvc获得请求数据 *详见com.qyj.controller.UserController.save11()�
                         <property name="maxUploadSizePerFile" value="500000"></property>
                     </bean>
                 3.编写文件上传代码
-                     @RequestMapping(value="/quick22")
-                     @ResponseBody
-                     public void save22(String username, MultipartFile uploadFile) throws IOException{
-                         System.out.println(username);
-                         System.out.println(uploadFile);
-                         //获得上传文件的名称
-                         String originalFilename = uploadFile.getOriginalFilename();
-                         //指定保存路径
-                         uploadFile.transferTo(new File("C:\\Users\\10788\\Desktop\\upload"+originalFilename));
-                     }
+                    @RequestMapping(value="/quick22")
+                    @ResponseBody
+                    public void save22(String username, MultipartFile uploadFile) throws IOException{
+                        System.out.println(username);
+                        System.out.println(uploadFile);
+                        //获得上传文件的名称
+                        String originalFilename = uploadFile.getOriginalFilename();
+                        //指定保存路径
+                        uploadFile.transferTo(new File("C:\\Users\\10788\\Desktop\\upload"+originalFilename));
+                    }
+            2.多文件上传步骤
+                jsp:
+                    <form action="/user/quick22" method="post" enctype="multipart/form-data">
+                        名称<input type="text" name="username"><br>
+                        文件1<input type="file" name="uploadFile"><br>
+                        文件2<input type="file" name="uploadFile2"><br>
+                        <input type="submit">
+                    </form>
+                代码:
+                    @RequestMapping(value="/quick22")
+                    @ResponseBody
+                    public void save22(String username, MultipartFile uploadFile, MultipartFile uploadFile2) throws IOException{
+                        System.out.println(username);
+                        System.out.println(uploadFile);
+                        System.out.println(uploadFile2);
+                        //获得上传文件的名称
+                        String originalFilename = uploadFile.getOriginalFilename();
+                        String originalFilename2 = uploadFile2.getOriginalFilename();
+                        //指定保存路径
+                        uploadFile.transferTo(new File("C:\\Users\\10788\\Desktop\\upload\\"+originalFilename));
+                        uploadFile.transferTo(new File("C:\\Users\\10788\\Desktop\\upload\\"+originalFilename2));
+                    }
 
 
 
